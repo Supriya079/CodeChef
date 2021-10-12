@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int t;
+	cin>>t;
+	
+	while(t--){ //0 is treated as false
+        int n;
+        cin>>n;
+        int sum = 0;
+        while(n != 0){
+         int last = n % 10; //Reminder after dividing by 10 
+         sum = sum + last;
+         n = n/10;
+        }
+	    cout<< sum <<endl;
+	}
+	
+	return 0;
+}
