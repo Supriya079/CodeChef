@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+	double withdrawl_bal,current_bal;
+	cin>>withdrawl_bal>>current_bal;
+	double with = fmod(withdrawl_bal, 5);
+	if(with==0 && current_bal>=withdrawl_bal+0.5){
+		current_bal = current_bal-(withdrawl_bal+0.5);
+	}
+	cout<<fixed<<setprecision(2)<<current_bal;
+	return 0;
+}
