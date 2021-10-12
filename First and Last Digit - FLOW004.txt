@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int last = n%10;
+	    int first = 0;
+	    if(n>9){
+	        while(n>9){
+	            n = n/10;
+	            first = n;
+	        }
+	        cout<<(first + last)<<endl;
+	    }else{
+	        cout<<(n+last)<<endl;
+	    }
+	}
+	return 0;
+}
