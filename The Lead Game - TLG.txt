@@ -1,0 +1,29 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+    cin>>n;
+	int p=INT_MIN;
+	int diff, w;
+	int point1=0, point2=0;
+	for(int i=0;i<n;i++){
+	    int a, b;
+	    scanf("%d%d",&a,&b);
+	    point1+=a;
+	    point2+=b;
+	    diff=abs(point1-point2);
+	    if(diff>p){
+	        p=diff;
+	        if(point1>point2){
+	            w=1;
+	        }
+	        else{
+	            w=2;
+	        }
+	    }
+	}
+	cout<<w<<" "<<p<<"\n";
+	return 0;
+}
