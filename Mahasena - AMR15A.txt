@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	int arr[t],e=0,o=0;
+
+	    for(int i=0;i<t;i++)
+	    {
+	        cin>>arr[i];
+	    
+	        if(arr[i]%2==0)
+	        {
+	            e++;
+	        }
+	        else
+	            o++;
+	    }
+	
+	    if(e>o)
+	        cout<<"READY FOR BATTLE"<<endl;
+	    else if(e==o)
+	        cout<<"NOT READY"<<endl;
+	    else
+	        cout<<"NOT READY"<<endl;
+	return 0;
+}
