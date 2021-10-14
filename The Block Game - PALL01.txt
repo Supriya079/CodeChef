@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,t,f,temp;
+    cin>>t;
+	
+	while (t--)
+	{
+	    cin>>n;
+	    
+	    temp=n;
+	    int s=0;
+	    while(temp!=0)
+	    {
+	        f=temp%10;
+	        s=(s*10)+f;
+	        temp/=10;
+	   	}
+	    if (n==s)
+	        cout<<"wins"<<endl;
+	    else
+	        cout<<"loses"<<endl;
+	}
+	return 0;
+}
