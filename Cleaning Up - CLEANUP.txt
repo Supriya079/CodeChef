@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+
+    int n,m;
+    cin>>n>>m;
+    vector<int> v(n);
+    for(int i=0;i<n;i++)v[i]=i+1;
+    while(m--){
+        int p;
+        cin>>p;
+        
+        v.erase(find(v.begin(),v.end(),p));
+        
+    }
+    
+    for(int i=0;i<v.size();i+=2){
+        cout<<v[i]<<" ";
+    }
+    cout<<"\n";
+    for(int i=1;i<v.size();i+=2){
+        cout<<v[i]<<" ";
+    }
+    cout<<"\n";
+
+    }
+
+    
+    return 0;
+}
