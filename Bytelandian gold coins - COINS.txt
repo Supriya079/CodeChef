@@ -1,0 +1,42 @@
+#include <iostream>
+#include <map>
+#include <vector>
+
+using namespace std;
+
+map <long long int ,long long int> hashmap;
+
+long long max(long long int a,long long int b)
+{
+    return a>b?a:b;
+}
+ 
+long long int get_profit(long long int n)
+{
+    if(n <=8)
+    {
+        return n;
+    }
+    
+    if(hashmap[n]!=0)
+    {
+        return hashmap[n];
+    }
+    
+    long long int ans=max(n,get_profit(n/2)+get_profit(n/3)+get_profit(n/4));
+    hashmap[n]=ans;
+    return ans;
+}
+
+int main() {
+    
+    long long int n;
+    
+    
+    while(scanf("%lld",&n)!=EOF)
+    { 
+        printf("%lld\n",get_profit(n));
+    }               
+	// your code goes here
+	return 0;
+}
