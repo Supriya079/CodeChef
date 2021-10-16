@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	while(1)
+	{
+	   int n;
+	   cin>>n;
+	   if(n==0)
+	   exit(0);
+	   int flag=1;
+	   int v[n+1];
+	   v[0]=0;
+	   for(int i=1; i<n+1; i++)
+	   {
+	       int x;
+	       cin>>x;
+	       v[i]=x;
+	       
+	   }
+	   for(int j=1; j<n+1; j++)
+	   {
+	       int num=v[j];
+	       if(v[num]!=j)
+	       {
+	           flag=0;
+	       }
+	   }
+	   cout<<(flag==0?"not ambiguous":"ambiguous");
+	   cout<<endl;
+	}
+	return 0;
+}
