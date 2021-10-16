@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int s;
+	    cin>>s;
+	    float ans;
+	    if(s<1500)
+	    {
+	       ans=s+0.9*s+0.1*s;
+	    }
+	    else ans=s+500+0.98*s;
+	   cout<<setprecision(2)<<fixed;
+	    cout<<ans<<endl;
+	}
+	return 0;
+}
