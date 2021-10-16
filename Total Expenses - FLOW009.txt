@@ -1,0 +1,21 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int q,p;
+	    cin>>q>>p;
+	    double fp;
+	    fp=q*p;
+	    if(q>1000){
+	        fp=fp-fp*0.1;
+	    }
+	    cout<<setprecision(10)<<fixed;
+	    cout<<fp<<endl;
+	    
+	}
+	return 0;
+}
