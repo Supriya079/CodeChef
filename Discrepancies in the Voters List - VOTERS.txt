@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int l,m,n,a,c=0;
+	cin>>l>>m>>n;
+	int s=l+m+n;
+	map<int,int>m1;
+	for(int i=0;i<s;i++){
+	    cin>>a;
+	    m1[a]++;
+	}
+	for(auto k:m1){
+	    if(k.second>=2){
+	        c++;
+	    }
+	}cout<<c<<endl;
+	for(auto k:m1){
+	    if(k.second>=2){
+	        cout<<k.first<<endl;
+	    }
+	}
+	return 0;
+}
