@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+bool pld(int n) {
+    int rem, rev=0,temp;
+    temp = n;
+    while (n!=0) {
+        rem = n % 10;
+        rev = rev*10 + rem;
+        n = n/10;
+}
+    if( rev==temp ){
+       return  true;
+    }
+    else { return false; }
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int l, r,sum=0;
+        cin >> l >> r;
+        for (int i = l; i <= r; i++) {
+            if(pld(i)) {
+                sum = sum + i;
+            }
+    }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
