@@ -1,0 +1,43 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+bool Prime_no(int n)
+{
+    if(n==1) return false;
+    for(int i=2; i<=sqrt(n); i++)
+    {
+        if(n%i==0) return false;
+    }
+    return true;
+    
+}
+
+int main() {
+    int t;
+    cin>>t;
+    while(true)
+    {
+      int n=t;
+      int rev=0;
+      while(n)
+      {
+          int rem;
+          rem=n%10;
+          rev=rev*10+rem;
+          n=n/10;
+      }
+       
+      if(rev==t && Prime_no(t)==true )
+      {
+          cout<<t<<endl;
+          break;
+      }
+      else
+      {
+          t+=1;
+      }      
+    }
+	// your code goes here
+	return 0;
+}
