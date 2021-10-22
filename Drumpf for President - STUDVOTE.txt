@@ -1,0 +1,35 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t>0)
+	{
+	    int n,k;
+	    cin>>n>>k;
+	    vector<int>a(n+1,0);
+	    for(int i=0;i<n;i++)
+	    {
+	        int x;
+	        cin>>x;
+	        if(i+1==x) a[x]=-1;
+	        if(a[x]==-1 )continue;
+	        else a[x]++;
+	    }
+	    int ans=0;
+	    for(int i=1;i<n+1;i++)
+	    {
+	        if(a[i]!=0 && a[i]!=-1)
+	        {
+	            if(a[i]>=k) ans++;
+	        }
+	    }
+	    cout<<ans<<endl;
+	    t--;
+	}
+	return 0;
+}
+
