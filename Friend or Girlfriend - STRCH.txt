@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+long long int countSubStr(char str[], int n, char x)
+{
+    long long int res = 0, count = 0;
+    for (long long int i = 0; i < n; i++) {
+        if (str[i] == x) {
+ 
+            // Number of sub-strings from position
+            // of current x to the end of str
+            res += ((count + 1) * (n - i));
+ 
+            // To store the number of characters
+            // before x
+            count = 0;
+        }
+        else
+            count++;
+    }
+ 
+    return res;
+}
+int main() {
+	// your code goes here
+	long long int t;
+	cin>>t;
+	while(t--)
+	{
+	     long long int n;
+	     cin>>n;
+	     char a[n];
+	     for(long long int i=0;i<n;i++)cin>>a[i];
+	     char x;
+	     cin>>x;
+	     cout<<countSubStr(a,n,x)<<endl;
+	     
+	}
+	return 0;
+}
