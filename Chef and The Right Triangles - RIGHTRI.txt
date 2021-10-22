@@ -1,0 +1,45 @@
+#include<iostream>
+#include<math.h>
+#include<algorithm>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+  
+  float distance(int x1,int y1,int x2,int y2){
+  	          float d=(pow((x2-x1),2)+pow((y2-y1),2));
+  	          return d;
+  }
+  
+  
+  int main(){
+  	
+  	int n,x1,y1,x2,y2,x3,y3,ans=0;
+  	float d1,d2,d3,s1,s2,s3;
+  	cin>>n;
+  while(n--){
+  		cin>>x1>>y1>>x2>>y2>>x3>>y3;
+  		d1=distance(x1,y1,x2,y2);
+  		d2=distance(x2,y2,x3,y3);
+  		d3=distance(x1,y1,x3,y3);
+  		
+  		 s1=d1+d2;
+  		 s2=d2+d3;
+  		 s3=d1+d3;
+  		
+  	   	     if (d1==s2||d2==s3||d3==s1){
+  	   	     	ans++;
+				  }
+  		
+  	}
+	  cout<<ans<<endl;
+  	
+  	
+  	return 0;
+  	
+  	
+  }
+
+	
+	
+	
