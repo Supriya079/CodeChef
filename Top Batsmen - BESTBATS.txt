@@ -1,0 +1,39 @@
+#include <algorithm>
+#include <iostream>
+using namespace std;
+int factorial(int n){
+    if(n==0 || n==1)
+    {
+        return 1;
+    }
+    return n*factorial(n-1);
+}
+
+int main() {
+
+	int t;
+	cin>>t;
+	while(t--){
+	    int s[11],k,count=0,r=0;
+	    for(int i=0;i<11;i++)
+	    {
+	        cin>>s[i];
+	    }
+	    cin>>k;
+	    sort(s,s+11);
+	    reverse(s,s+11);
+	    for(int i=0;i<11;i++)
+	    {
+	        if(s[i]==s[k-1]) 
+	        count++;
+	    }
+	    for(int i=0;i<k;i++)
+	    {
+	        if(s[i]==s[k-1])
+	        r++;
+	    }
+	    cout<<(factorial(count)/factorial(count-r))/factorial(r)<<endl;
+	}
+	return 0;
+}
+
