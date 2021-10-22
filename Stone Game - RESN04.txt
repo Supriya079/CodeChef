@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,n;
+	cin>>t;
+	while(t--){
+	    cin>>n;
+	    int num[n+1];
+	    for(int j=1;j<=n;j++){
+	        cin>>num[j];
+	    }
+	   int count=0;
+	    for(int j=1;j<=n;j++)
+	    {
+	        while(num[j]>=j)
+	        {
+	            num[j]-=j;
+	            count++;
+	        }
+	            
+	    }
+	    if(count%2==0)
+	        cout<<"BOB"<<endl;
+	    else
+	        cout<<"ALICE"<<endl;
+	}
+	return 0;
+}
