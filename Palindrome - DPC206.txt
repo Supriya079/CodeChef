@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+long long int getRev(long long int n)
+{
+    long long int rev=0;
+    while(n)
+    {
+        int rem=n%10;
+        rev=10*rev+rem;
+        n=n/10;
+    }
+    return rev;
+}
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    long long int n; 
+	    cin>>n;
+	    int count=0;
+	    while(1)
+	    {
+	        long long int x=getRev(n);
+	        if(n==x)
+	        {
+	            break;
+	        }
+	        if(n+x==getRev(n+x))
+	        {
+	            count++;
+	            n=n+x;
+	            break;
+	        }
+	        count++;
+	        n=n+x;
+	    }
+	    cout<<count<<" "<<n<<endl;
+	}
+	return 0;
+}
