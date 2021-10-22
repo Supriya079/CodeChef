@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+typedef long long int ll;
+
+int main() {
+    ll n,q;
+    cin>>n>>q;
+    vector<ll> vectA,vectB;
+    for(ll i=0;i<n;i++){
+        ll temp;
+        cin>>temp;
+        vectA.push_back(temp);
+    }
+    for(ll i=0;i<n;i++){
+        ll tempu;
+        cin>>tempu;
+        vectB.push_back(tempu);
+    }
+    for(ll i=0;i<q;i++){
+        ll l,r;
+        cin>>l>>r;
+        ll sum=0;
+        for(ll i=l-1;i<=r-1;i++){
+            sum=sum+vectA[i]*vectB[i];
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
