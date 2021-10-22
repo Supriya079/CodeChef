@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+	int t;
+	cin>>t;
+	while(t--){ 
+	    int n,a,b;
+	    cin>>n;
+	    vector<int>x;
+	    vector<int>y;
+	    for(int l=0;l<n;l++){
+	        cin>>a;
+	        
+	        x.push_back(a);
+	        
+	    }
+	    for(int l=0;l<n;l++){
+	       
+	        cin>>b;
+	     
+	        y.push_back(b);
+	    }
+	    sort(x.begin(),x.end());
+	    sort(y.begin(),y.end());
+	    int i=0,count=0;
+	    int j=0;
+	    while(j<n){
+	        if(x[i]<=y[j]){
+	            count++;
+	            i++;
+	            j++;
+	        }
+	        else{
+	            j++;
+	        }
+	    }
+	    cout<<count<<endl;
+	}
+	return 0;
+}
