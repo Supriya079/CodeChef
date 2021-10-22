@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int tc;
+	cin >> tc;
+	while(tc-->0){
+	    int a,barcelona,eibar,realmadrid,malaga;
+	    string s;
+	    for(int i=0;i<4;i++){
+	        cin >> s >> a;
+	        if(s[0]=='B') barcelona=a;
+	        if(s[0]=='E') eibar=a;
+	        if(s[0]=='R') realmadrid=a;
+	        if(s[0]=='M') malaga=a;
+	    }
+	    if(barcelona<=eibar || realmadrid>=malaga) cout<<"RealMadrid\n";
+	    else cout<<"Barcelona\n";
+	}
+	return 0;
+}
