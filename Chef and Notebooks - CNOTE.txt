@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int x,y,k,n,i,flag=0; 
+	    cin>>x>>y>>k>>n;
+	    int p[n],c[n];
+	    for(i=0;i<n;i++){
+	        cin>>p[i];
+	        cin>>c[i];
+	        if(p[i]>=(x-y) && c[i]<=k)
+	        {
+	            flag=1;
+	        }
+	        
+	    }
+	    
+	    if(flag==1) cout<<"LuckyChef"<<endl;
+	    else cout<<"UnluckyChef"<<endl;
+	    
+	}
+	return 0;
+}
