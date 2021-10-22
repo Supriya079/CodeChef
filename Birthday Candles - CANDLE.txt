@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >> t;
+	while(t--){
+	    int i=0, minimum=9, minIndex=0, arr[10];
+	    while(i<=9){
+	        cin >> arr[i];
+            if(arr[i]<minimum && i!=0){
+                minIndex = i;
+                minimum = arr[i];
+            }
+	        i++;
+	    }
+	    if(arr[0]<minimum){
+	        minimum = arr[0];
+	        minIndex = 0;
+	        cout<<1;
+	    }
+    	for(int i=0; i<=minimum; i++) cout<<minIndex;
+    	cout<<"\n";
+	}
+	return 0;
+}
